@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class Ejercicios {
 
-    public void ejercicio1() {
+    public void ejercicio1(){
         int numero;
         boolean bandera;
         char letra;
@@ -25,7 +25,7 @@ public class Ejercicios {
         System.out.println("Hello World!");
     }
     
-    public void ejercicio2() {
+    public void ejercicio2(){
         int numero = 1;
         boolean bandera = true;
         char letra = 'd';
@@ -43,13 +43,13 @@ public class Ejercicios {
         System.out.println(suma);
     }
     
-    public void ejercicio4() {
+    public void ejercicio4(){
         int edad = 22;
         String nombre = "Derek";
         System.out.println("Hola " + nombre + " tienes " + edad);
     }
     
-    public void ejercicio5() {
+    public void ejercicio5(){
         Scanner leer = new Scanner(System.in);
         boolean bandera;
         double numero;
@@ -64,7 +64,7 @@ public class Ejercicios {
         System.out.println(letra + " " + numero + " " + bandera);
     }
     
-    public void ejercicio6() {
+    public void ejercicio6(){
         int num1,num2;
         
         Scanner leer = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class Ejercicios {
         }
     }
     
-    public void ejercicio7() {
+    public void ejercicio7(){
         int tipoMotor;
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingresa un numero");
@@ -95,7 +95,7 @@ public class Ejercicios {
         }
     }
     
-    public void ejercicio8() {
+    public void ejercicio8(){
         int nota = -1;
         Scanner leer = new Scanner(System.in);
         
@@ -106,7 +106,7 @@ public class Ejercicios {
         System.out.println("Nota: " + nota);
     }
     
-    public void ejercicio9() {
+    public void ejercicio9(){
         int num, contador = 0, suma = 0;
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingresa 20 numeros o hasta que ingrese un 0");

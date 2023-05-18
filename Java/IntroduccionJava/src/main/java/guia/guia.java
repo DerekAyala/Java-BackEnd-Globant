@@ -10,7 +10,7 @@ package guia;
  */
 public class guia {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Ejercicios ejercicios = new Ejercicios();
         ejercicios.ejercicio10();
     }
