@@ -12,6 +12,6 @@ public class guia {
 
     public static void main(String[] args){
         Ejercicios ejercicios = new Ejercicios();
-        ejercicios.ejercicio11();
+        ejercicios.ejercicio12();
     }
 }

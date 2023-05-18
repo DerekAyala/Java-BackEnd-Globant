@@ -166,4 +166,23 @@ public class Ejercicios {
     public static String procesarCadena(String cadena){
         return cadena.replace("a", "@").replace("e", "#").replace("i", "$").replace("o", "%").replace("u", "*");
     }
+    
+    public void ejercicio12(){
+        int num1,num2;
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Ingresa un numero: ");
+        num1 = leer.nextInt();
+        System.out.println("Ingresa un numero: ");
+        num2 = leer.nextInt();
+        esMultiplo(num1,num2);
+    }
+    
+    public static void esMultiplo(int num1,int num2){
+        if (num1 % num2 == 0){
+            System.out.println("Es multiplo");
+        } else {
+            System.out.println("No es multiplo");
+        }
+    }
 }
