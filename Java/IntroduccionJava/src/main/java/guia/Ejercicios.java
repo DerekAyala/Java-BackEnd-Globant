@@ -124,4 +124,24 @@ public class Ejercicios {
         }
         System.out.println("Suma: " + suma);
     }
+    
+    public void ejercicio10(){
+        int num, contador = 0;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingresa un numeros entre 1 y 20");
+        while ( contador < 4){
+            do {
+                num = leer.nextInt();
+                if ( num < 1 || num > 20 ){
+                    System.out.println("Numero invalido");
+                }
+            } while (num < 1 || num > 20);
+            System.out.print(num + " ");
+            for(int i=0; i<num;i++){
+                System.out.print("*");
+            }
+            System.out.println("");
+            contador++;
+        }
+    }
 }
