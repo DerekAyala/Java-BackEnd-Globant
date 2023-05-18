@@ -144,4 +144,26 @@ public class Ejercicios {
             contador++;
         }
     }
+    
+    public void ejercicio11(){
+        String frase = "";
+        String letra;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingresa caracteres hasta un . para finalizar");
+        do{
+            do{
+                letra = leer.nextLine();
+                if(letra.length() != 1){
+                    System.out.println("Ingresa un solo caracter");
+                }
+            }while(letra.length() != 1);
+            frase = frase.concat(String.valueOf(letra));
+        }while( !".".equals(letra));
+        frase = procesarCadena(frase);
+        System.out.println(frase);
+    }
+    
+    public static String procesarCadena(String cadena){
+        return cadena.replace("a", "@").replace("e", "#").replace("i", "$").replace("o", "%").replace("u", "*");
+    }
 }
