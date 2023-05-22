@@ -185,4 +185,21 @@ public class Ejercicios {
             System.out.println("No es multiplo");
         }
     }
+    
+    public void ejercicio13_14(){
+        String integrante;
+        String[] equipo = new String[3];
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingresa los nombres de tu equipo");
+        for(int i = 0;i<=2;i++){
+            integrante = leer.nextLine();
+            equipo[i] = integrante;
+        }
+        
+        for(int i = 0;i<=2;i++){
+            System.out.println(equipo[i]);
+        }
+        
+        
+    }
 }
