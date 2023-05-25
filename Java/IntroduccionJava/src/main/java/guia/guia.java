@@ -11,7 +11,7 @@ package guia;
 public class guia {
 
     public static void main(String[] args){
-        EjerciciosPracticos ejercicios = new EjerciciosPracticos();
-        ejercicios.Ejercicio21();
+        EjerciciosExtras ejercicios = new EjerciciosExtras();
+        ejercicios.Ejercicio24();
     }
 }
