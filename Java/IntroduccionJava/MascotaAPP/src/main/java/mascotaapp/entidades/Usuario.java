@@ -5,6 +5,7 @@
 package mascotaapp.entidades;
 
 import java.util.Date;
+import mascotaapp.enumeraciones.SexoHumano;
 
 /**
  *
@@ -17,17 +18,19 @@ public class Usuario {
     public int dni;
     public Date nacimiento;
     public String pais;
+    public SexoHumano sexo;
 
     public Usuario() {
         
     }
 
-    public Usuario(String nombre, String apellido, int dni, Date nacimiento, String pais) {
+    public Usuario(String nombre, String apellido, int dni, Date nacimiento, String pais, SexoHumano sexo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.nacimiento = nacimiento;
         this.pais = pais;
+        this.sexo = sexo;
     }
 
     public String getNombre() {
@@ -69,6 +72,16 @@ public class Usuario {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    public SexoHumano getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(SexoHumano sexo) {
+        this.sexo = sexo;
+    }
+    
+    
 
     @Override
     public String toString() {

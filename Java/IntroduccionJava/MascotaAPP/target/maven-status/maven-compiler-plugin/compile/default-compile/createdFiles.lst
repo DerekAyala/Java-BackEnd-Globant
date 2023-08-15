@@ -1,7 +1,10 @@
 mascotaapp/MascotaAPP.class
 mascotaapp/utilidades/Comparadores$2.class
 mascotaapp/entidades/Mascota.class
+ejemplos/enumeraciones/SexoAnimal.class
+mascotaapp/enumeraciones/SexoHumano.class
 mascotaapp/utilidades/Comparadores.class
 mascotaapp/utilidades/Comparadores$1.class
+mascotaapp/enumeraciones/Raza.class
 mascotaapp/servicios/ServicioMascota.class
 mascotaapp/entidades/Usuario.class

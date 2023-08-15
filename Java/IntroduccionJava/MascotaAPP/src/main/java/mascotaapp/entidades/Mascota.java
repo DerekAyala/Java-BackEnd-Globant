@@ -4,7 +4,9 @@
  */
 package mascotaapp.entidades;
 
+import ejemplos.enumeraciones.SexoAnimal;
 import java.util.Objects;
+import mascotaapp.enumeraciones.Raza;
 
 /**
  *
@@ -18,8 +20,9 @@ public class Mascota implements Comparable<Mascota>{
     private String color;
     private Integer edad;
     private boolean cola;
-    private String raza;
+    private Raza raza;
     private int energia;
+    private SexoAnimal sexo;
 
     public Mascota() {
         energia = 1000;
@@ -32,7 +35,7 @@ public class Mascota implements Comparable<Mascota>{
         energia = 1000;
     }
 
-    public Mascota(String nombre, String apodo, String tipo, String color, Integer edad, boolean cola, String raza) {
+    public Mascota(String nombre, String apodo, String tipo, String color, Integer edad, boolean cola, Raza raza, SexoAnimal sexo) {
         this.nombre = nombre;
         this.apodo = apodo;
         this.tipo = tipo;
@@ -40,6 +43,7 @@ public class Mascota implements Comparable<Mascota>{
         this.edad = edad;
         this.cola = cola;
         this.raza = raza;
+        this.sexo = sexo;
         energia = 1000;
     }
 
@@ -69,8 +73,12 @@ public class Mascota implements Comparable<Mascota>{
         this.cola = cola;
     }
 
-    public void setRaza(String raza) {
+    public void setRaza(Raza raza) {
         this.raza = raza;
+    }
+    
+    public void setSexo(SexoAnimal sexo){
+        this.sexo = sexo;
     }
 
     public String getNombre() {
@@ -97,8 +105,12 @@ public class Mascota implements Comparable<Mascota>{
         return cola;
     }
 
-    public String getRaza() {
+    public Raza getRaza() {
         return raza;
+    }
+    
+    public SexoAnimal getSexo() {
+        return sexo;
     }
     
     /**
