@@ -6,13 +6,13 @@ package mascotaapp.entidades;
 
 import ejemplos.enumeraciones.SexoAnimal;
 import java.util.Objects;
-import mascotaapp.enumeraciones.Raza;
+import mascotaapp.enumeraciones.RazaPerruna;
 
 /**
  *
  * @author derek
  */
-public class Mascota implements Comparable<Mascota>{
+public class Mascota<T>{
 
     private String nombre;
     private String apodo;
@@ -20,7 +20,7 @@ public class Mascota implements Comparable<Mascota>{
     private String color;
     private Integer edad;
     private boolean cola;
-    private Raza raza;
+    private T raza;
     private int energia;
     private SexoAnimal sexo;
 
@@ -35,7 +35,7 @@ public class Mascota implements Comparable<Mascota>{
         energia = 1000;
     }
 
-    public Mascota(String nombre, String apodo, String tipo, String color, Integer edad, boolean cola, Raza raza, SexoAnimal sexo) {
+    public Mascota(String nombre, String apodo, String tipo, String color, Integer edad, boolean cola, T raza, SexoAnimal sexo) {
         this.nombre = nombre;
         this.apodo = apodo;
         this.tipo = tipo;
@@ -47,156 +47,83 @@ public class Mascota implements Comparable<Mascota>{
         energia = 1000;
     }
 
-    public void setNombre(String nombre) {
-        if (nombre.length() > 0) {
-            this.nombre = nombre;
-        }
-    }
-
-    public void setApodo(String apodo) {
-        this.apodo = apodo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
-
-    public void setCola(boolean cola) {
-        this.cola = cola;
-    }
-
-    public void setRaza(Raza raza) {
-        this.raza = raza;
-    }
-    
-    public void setSexo(SexoAnimal sexo){
-        this.sexo = sexo;
-    }
-
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApodo() {
         return apodo;
     }
 
+    public void setApodo(String apodo) {
+        this.apodo = apodo;
+    }
+
     public String getTipo() {
         return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getColor() {
         return color;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public Integer getEdad() {
         return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
     }
 
     public boolean isCola() {
         return cola;
     }
 
-    public Raza getRaza() {
+    public void setCola(boolean cola) {
+        this.cola = cola;
+    }
+
+    public T getRaza() {
         return raza;
     }
-    
+
+    public void setRaza(T raza) {
+        this.raza = raza;
+    }
+
+    public int getEnergia() {
+        return energia;
+    }
+
+    public void setEnergia(int energia) {
+        this.energia = energia;
+    }
+
     public SexoAnimal getSexo() {
         return sexo;
     }
+
+    public void setSexo(SexoAnimal sexo) {
+        this.sexo = sexo;
+    }
     
-    /**
-     * Funcion destinada a pasear
-     * @param energiaRestar
-     * @return energia
-     */
-
-    public int pasear(int energiaRestar) {
-        energia -= energiaRestar;
-        return energia;
-    }
-
-    /**
-     * Funcion destinada a pasear por vueltas
-     * @param energiaRestar
-     * @param vueltas
-     * @return energia
-     */
-    public int pasear(int energiaRestar, int vueltas) {
-
-        for (int i = 0; i < vueltas; i++) {
-            energia -= energiaRestar;
-        }
-        return energia;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.nombre);
-        hash = 17 * hash + Objects.hashCode(this.apodo);
-        hash = 17 * hash + Objects.hashCode(this.tipo);
-        hash = 17 * hash + Objects.hashCode(this.color);
-        hash = 17 * hash + Objects.hashCode(this.edad);
-        hash = 17 * hash + (this.cola ? 1 : 0);
-        hash = 17 * hash + Objects.hashCode(this.raza);
-        hash = 17 * hash + this.energia;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Mascota other = (Mascota) obj;
-        if (this.cola != other.cola) {
-            return false;
-        }
-        if (this.energia != other.energia) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.apodo, other.apodo)) {
-            return false;
-        }
-        if (!Objects.equals(this.tipo, other.tipo)) {
-            return false;
-        }
-        if (!Objects.equals(this.color, other.color)) {
-            return false;
-        }
-        if (!Objects.equals(this.raza, other.raza)) {
-            return false;
-        }
-        return Objects.equals(this.edad, other.edad);
-    }
-
     
+
     @Override
     public String toString() {
-        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + '}';
+        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + ", energia=" + energia + ", sexo=" + sexo + '}';
     }
-
-    @Override
-    public int compareTo(Mascota t) {
-        return t.getNombre().compareTo(this.getNombre());
-    }
-
+    
 }

@@ -5,6 +5,6 @@ ejemplos/enumeraciones/SexoAnimal.class
 mascotaapp/enumeraciones/SexoHumano.class
 mascotaapp/utilidades/Comparadores.class
 mascotaapp/utilidades/Comparadores$1.class
-mascotaapp/enumeraciones/Raza.class
+mascotaapp/enumeraciones/RazaPerruna.class
 mascotaapp/servicios/ServicioMascota.class
 mascotaapp/entidades/Usuario.class

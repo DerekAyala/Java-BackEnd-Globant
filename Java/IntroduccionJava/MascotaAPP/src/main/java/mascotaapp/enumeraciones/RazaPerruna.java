@@ -8,12 +8,12 @@ package mascotaapp.enumeraciones;
  *
  * @author derekayala
  */
-public enum Raza {
+public enum RazaPerruna {
     BEAGLE(1,"Beagle"), COCKER(2,"Beagle"), PITBULL(3,"Beagle"), BORDER_COLLIE(4,"Beagle");
     private Integer codigo;
     private String valor;
     
-    private Raza(Integer codigo, String valor){
+    private RazaPerruna(Integer codigo, String valor){
         this.codigo = codigo;
         this.valor = valor;
     }

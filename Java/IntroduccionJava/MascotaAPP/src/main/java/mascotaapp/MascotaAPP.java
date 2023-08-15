@@ -6,8 +6,8 @@ package mascotaapp;
 
 
 
-import mascotaapp.entidades.Usuario;
-import mascotaapp.enumeraciones.SexoHumano;
+import mascotaapp.entidades.Mascota;
+import mascotaapp.enumeraciones.RazaPerruna;
 
 
 /**
@@ -17,8 +17,8 @@ import mascotaapp.enumeraciones.SexoHumano;
 public class MascotaAPP {
 
     public static void main(String[] args) {
-        Usuario u = new Usuario();
-        u.setSexo(SexoHumano.HOMBRE);
-        System.out.println(u.getSexo());
+        Mascota m1 = new Mascota<RazaPerruna>("Pepa", "Lola", "Perro");
+        m1.setRaza(RazaPerruna.BEAGLE);
+        System.out.println(m1.toString());
     }
 }
